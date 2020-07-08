@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.buttonsContainer {
+  background: white;
+  -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alignment {
+  height: 55px;
+  width: 53px;
+}
+
+.activeLines {
+  position: absolute;
+  height: 55px;
+  width: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.longLine {
+  width: 100%;
+  height: 15%;
+  background-color: #DAC5FC;
+  border-radius: 2px;
+}
+
+.smallLine {
+  width: 70%;
+  height: 15%;
+  background-color: #DAC5FC;
+  border-radius: 2px;
+}
+
+.leftAlignment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.centerAlignment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.rightAlignment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.activeLongLine {
+  width: 100%;
+  height: 15%;
+  background-color: #6610f2;
+  border-radius: 2px;
+}
+
+.activeSmallLine {
+  width: 70%;
+  height: 15%;
+  background-color: #6610f2;
+  border-radius: 2px;
+}
+
+.text {
+  width: 330px;
+  margin-top: 50px;
+}
+
+p {
+  font-size: 17px;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/*# sourceMappingURL=style.css.map */

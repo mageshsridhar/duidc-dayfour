@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Four</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js" integrity="sha512-3WGIRFCuTpZhqYujwLp5RtARPkOy3uRtc3RXB31bJ9/i6VH2C66Z0WBV6gHhdhbUIDKFx8yTkLfEjdQM5Wl+ZQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="buttonsContainer">
+        <div class="leftAlignment alignment">
+            <div class="longLine"></div>
+            <div class="smallLine"></div>
+            <div class="longLine"></div>
+            <div class="smallLine"></div>
+        </div>
+        <div class="centerAlignment alignment">
+            <div class="longLine"></div>
+            <div class="smallLine"></div>
+            <div class="longLine"></div>
+            <div class="smallLine"></div>
+        </div>
+        <div class="rightAlignment alignment">
+            <div class="longLine"></div>
+            <div class="smallLine"></div>
+            <div class="longLine"></div>
+            <div class="smallLine"></div>
+        </div>
+        <div class="activeLines">
+            <div class="activeLongLine" id="activeLineOne"></div>
+            <div class="activeSmallLine" id="activeLineTwo"></div>
+            <div class="activeLongLine" id="activeLineThree"></div>
+            <div class="activeSmallLine" id="activeLineFour"></div> 
+        </div>
+    </div>
+    <div class="text">
+        <p id="textContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet volutpat nisi ut bibendum. Ut non dignissim sapien. Vivamus porta.</p>
+    </div>
+    <script>
+        
+        var alignment = 1; //0 for left, 1 for center, 2 for right
+        document.querySelector(".leftAlignment").addEventListener("click",leftAlign);
+        document.querySelector(".rightAlignment").addEventListener("click",rightAlign);
+        document.querySelector(".activeLines").addEventListener("click",centerAlign);
+        function leftAlign()
+        {
+            var left_tl = gsap.timeline();
+            left_tl.to("#activeLineOne",{duration:0.5,x:-101, ease: "power2.in"});
+            left_tl.to("#activeLineTwo",{duration:0.5,x:-108, ease: "power2.in"},"-=0.4");
+            left_tl.to("#activeLineThree",{duration:0.5,x:-101, ease: "power2.in"},"-=0.4");
+            left_tl.to("#activeLineFour",{duration:0.5,x:-108, ease: "power2.in"},"-=0.4");
+            document.getElementById("textContent").style.textAlign = "left";
+        }
+        function rightAlign()
+        {
+            var right_tl = gsap.timeline(); 
+            right_tl.to("#activeLineOne",{duration:0.5,x:101, ease: "power2.in"});
+            right_tl.to("#activeLineTwo",{duration:0.5,x:108, ease: "power2.in"},"-=0.4");
+            right_tl.to("#activeLineThree",{duration:0.5,x:101, ease: "power2.in"},"-=0.4");
+            right_tl.to("#activeLineFour",{duration:0.5,x:108, ease: "power2.in"},"-=0.4");
+            document.getElementById("textContent").style.textAlign = "right";
+        }
+        function centerAlign()
+        {
+            var right_tl = gsap.timeline(); 
+            right_tl.to("#activeLineOne",{duration:0.5,x:0, ease: "power2.in"});
+            right_tl.to("#activeLineTwo",{duration:0.5,x:0, ease: "power2.in"},"-=0.4");
+            right_tl.to("#activeLineThree",{duration:0.5,x:0, ease: "power2.in"},"-=0.4");
+            right_tl.to("#activeLineFour",{duration:0.5,x:0, ease: "power2.in"},"-=0.4");
+            document.getElementById("textContent").style.textAlign = "center";
+        }
+
+    </script>
+</body>
+</html>
